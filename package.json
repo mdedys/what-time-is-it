@@ -1,0 +1,11 @@
+{
+  "name": "is-your-coworker-sleeping",
+  "version": "1.0.0-alpha",
+  "description": "Simple app that lets you know if your coworker might be sleeping based on timezones",
+  "repository": "git@github.com:mdedys/is-your-coworker-sleeping.git",
+  "author": "Mike Dedys <mikededys@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
+}
