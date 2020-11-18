@@ -1,5 +1,7 @@
 {
   "name": "@iycws/desktop-app",
+  "description": "Simple app that lets you know if your coworker might be sleeping based on timezones",
+  "author": "Mike Dedys <mikededys@gmail.com>",
   "version": "1.0.0-alpha",
   "main": "public/main.js",
   "scripts": {
