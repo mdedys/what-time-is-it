@@ -1,13 +1,13 @@
-name: desktop-app
+name: web-app
 
 on:
   push:
     paths:
-      - packages/desktop-app/*
+      - packages/web-app/*
     branches: [master]
   pull_request:
     paths:
-      - packages/desktop-app/*
+      - packages/web-app/*
     branches: [master]
 
 jobs:
@@ -32,5 +32,5 @@ jobs:
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
-      - run: yarn desktop-app build
-      - run: yarn desktop-app react-test
+      - run: yarn web-app build
+      - run: yarn web-app test

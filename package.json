@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "scripts": {
-    "desktop-app": "yarn workspace @iycws/desktop-app"
+    "webapp": "yarn workspace @iycws/webapp"
   },
   "resolutions": {
     "fsevents": "~2.1.1"
