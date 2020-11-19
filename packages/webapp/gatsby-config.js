@@ -16,6 +16,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-tsconfig-paths",
     "gatsby-plugin-react-helmet",
   ],
