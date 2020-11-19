@@ -5,7 +5,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 export default function GithubLink() {
   return (
     <Link
-      href="https://github.com/mdedys/is-your-coworker-sleeping"
+      href="https://github.com/mdedys/what-time-is-it"
       target="_blank"
       color="textPrimary"
     >
