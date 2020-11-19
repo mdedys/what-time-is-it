@@ -4,7 +4,7 @@ import { ThemeProvider, StylesProvider } from "@material-ui/core/styles";
 import LightTheme from "./themes/light";
 
 export default ({ element }) => (
-  <StylesProvider injectFirst>
+  <StylesProvider>
     <ThemeProvider theme={LightTheme}>
       <StyledThemeProvider theme={LightTheme}>{element}</StyledThemeProvider>
     </ThemeProvider>

@@ -56,8 +56,8 @@ export default React.memo(function Map() {
   const theme = useTheme();
 
   const ref = React.useRef<HTMLDivElement>(null);
-  const [height, setHeight] = React.useState<number>(window.innerHeight);
-  const [width, setWidth] = React.useState<number>(window.innerWidth);
+  const [height, setHeight] = React.useState<number>(500);
+  const [width, setWidth] = React.useState<number>(500);
   const [capital, setCapital] = React.useState<CityData>(getCapital());
 
   React.useEffect(() => {

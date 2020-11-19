@@ -9,7 +9,7 @@ const Outer = styled.div<{
 }>`
   background-color: ${(props) => props.theme.palette.background.default};
   box-shadow: ${(props) => props.theme.shadows[5]};
-  border: 1px solid ${(props) => props.theme.palette.dark};
+  border: 1px solid ${(props) => props.theme.palette.primary.dark};
   padding: 8px;
 `;
 

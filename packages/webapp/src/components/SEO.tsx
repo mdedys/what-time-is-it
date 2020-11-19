@@ -25,7 +25,6 @@ interface Props {
 function SEO(props: Props) {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
-  console.log("site: ", site);
 
   const {
     defaultTitle,
@@ -51,9 +50,8 @@ function SEO(props: Props) {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   );
 }
 
-export default SEO;
+export default React.memo(SEO);
