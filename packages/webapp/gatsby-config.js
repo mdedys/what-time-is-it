@@ -16,6 +16,16 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-SML4N6CBLH",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        defer: true,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-tsconfig-paths",
     "gatsby-plugin-react-helmet",
