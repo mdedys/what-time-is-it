@@ -1,4 +1,10 @@
 import RawData from "city-timezones/data/cityMap.json";
+import CountryCapitals from "country-json/src/country-by-capital-city.json";
+
+export interface CountryCapital {
+  country: string;
+  city: string;
+}
 
 export interface CityData {
   readonly lat: number;
@@ -16,15 +22,45 @@ export interface CityData {
   readonly exactProvince: string;
 }
 
-const data = RawData as CityData[];
+export interface CityLookupMap {
+  [city: string]: CityData;
+}
+
+const data = (RawData as CityData[]).sort((c1, c2) =>
+  c1.city.localeCompare(c2.city)
+);
+
+const map = data.reduce<CityLookupMap>((map, record) => {
+  map[
+    `${record.city_ascii.toLowerCase()}::${record.country.toLowerCase()}`
+  ] = record;
+  return map;
+}, {});
 
 /**
  * Return cities as an array of strings
  */
-function getCities() {
-  return data.sort((c1, c2) => c1.city.localeCompare(c2.city));
+function get() {
+  return data;
+}
+
+/**
+ * Find city in CityLookupMap
+ * @param city Name of city to find
+ */
+function lookup(key: string): CityData | null {
+  return map[key.toLowerCase()] || null;
+}
+
+/**
+ * Get all the capitals in the world
+ */
+function capitals(): CountryCapital[] {
+  return CountryCapitals as CountryCapital[];
 }
 
 export default {
-  getCities,
+  capitals,
+  get,
+  lookup,
 };

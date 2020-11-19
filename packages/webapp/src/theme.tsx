@@ -1,9 +1,12 @@
 import React from "react";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { ThemeProvider, StylesProvider } from "@material-ui/core/styles";
-import DarkTheme from "./themes/dark";
+import LightTheme from "./themes/light";
 
 export default ({ element }) => (
   <StylesProvider injectFirst>
-    <ThemeProvider theme={DarkTheme}>{element}</ThemeProvider>
+    <ThemeProvider theme={LightTheme}>
+      <StyledThemeProvider theme={LightTheme}>{element}</StyledThemeProvider>
+    </ThemeProvider>
   </StylesProvider>
 );

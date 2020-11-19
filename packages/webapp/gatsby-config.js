@@ -21,6 +21,9 @@ module.exports = {
     "gatsby-plugin-react-helmet",
   ],
   siteMetadata: {
-    title: "Is your coworker sleeping?",
+    title: "What time is it there?",
+    description: "Quick utility to check the local time in a given city",
+    url: "https://whattimeisitthere.com",
+    image: "static/favicon.ico",
   },
 };

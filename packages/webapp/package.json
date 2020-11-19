@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "city-timezones": "^1.2.0",
+    "country-json": "^1.1.0",
     "gatsby": "^2.26.1",
     "luxon": "^1.25.0",
     "react": "^16.12.0",
@@ -29,6 +31,7 @@
     "@types/react-simple-maps": "^1.0.3",
     "@types/styled-components": "^5",
     "babel-plugin-styled-components": "^1.11.1",
+    "gatsby-plugin-google-analytics": "^2.6.0",
     "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-styled-components": "^3.4.0",
