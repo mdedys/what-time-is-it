@@ -17,13 +17,15 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        trackingId: "G-SML4N6CBLH",
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        defer: true,
+        googleTagManager: {
+          trackingId: "GTM-KHRHFTH", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-tagmanager", // default
+          dataLayerName: "dataLayer", // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production"],
       },
     },
     "gatsby-plugin-styled-components",
